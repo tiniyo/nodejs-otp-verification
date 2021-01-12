@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-otp-verification",
+  "version": "1.0.0",
+  "description": "DEMO TINIYO API OTP VERIFICATION",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akshat-vishwakarma/nodejs-otp-verification.git"
+  },
+  "author": "Akshat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akshat-vishwakarma/nodejs-otp-verification/issues"
+  },
+  "homepage": "https://github.com/Akshat-vishwakarma/nodejs-otp-verification#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "btoa": "^1.2.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  }
+}
