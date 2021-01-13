@@ -1,7 +1,7 @@
 # Nodejs-otp-verification
 This repository help to verify phone number using sms/call OTP with nodejs.
 
-![Project Image]("./public/images/Inkedscreen-capture.gif")
+![Project Image](/public/images/Inkedscreen-capture.gif)
 
 > This is a ReadMe template to help save you time and effort.
 
@@ -24,7 +24,7 @@ This repository help to verify phone number using sms/call OTP with nodejs.
 ```
 - Create your Free TINIYO Account and grab your "API Key": https://www.tiniyo.com 
 
-![Project Image]("./public/images/tiniyo.jpeg")
+![Project Image](/public/images/tiniyo.jpeg)
 
 - Make a new file ".env" and write your TINIYO API Key and Secret Key as-
 ```html
