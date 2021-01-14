@@ -3,8 +3,6 @@ This repository help to verify phone number using sms/call OTP with nodejs.
 
 ![Project Image](/public/images/Inkedscreen-capture.gif)
 
-> This is a ReadMe template to help save you time and effort.
-
 ---
 # Requirements
 
