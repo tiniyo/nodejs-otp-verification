@@ -1,18 +1,14 @@
-require('dotenv').config();
+
+const config=require('./config');
 const express = require("express");
 const bodyParser = require("body-parser");
 const fetch = require("node-fetch");
-const btoa = require("btoa");
+
 
 const app= express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-
-const AuthId= process.env.AuthID;
-const AuthSecretId = process.env.AuthSecretID;
-const basicAuth = `${AuthId}:${AuthSecretId}`;
-const encodedAuth = btoa(basicAuth);
 
 app.get("/",(req,res)=>{
     res.sendFile(__dirname+"/index.html");
@@ -21,11 +17,11 @@ app.get("/",(req,res)=>{
 app.post("/",async (req,res)=>{
     const number = req.body.number;    
     
-    const url= `https://api.tiniyo.com/v1/Account/${AuthId}/Verifications`;
+    const url= `https://api.tiniyo.com/v1/Account/${config.AuthID}/Verifications`;
     const options={
         method:"POST",
         headers:{
-            "Authorization": `Basic ${encodedAuth}`,
+            "Authorization": `Basic ${config.encodedAuth}`,
             "content-type": "application/json"
         },
         body:JSON.stringify({
@@ -51,11 +47,11 @@ app.post("/otp",async (req,res)=>{
     const number = req.body.number;    
     const otp= req.body.otp;
 
-    const url= `https://api.tiniyo.com/v1/Account/${AuthId}/VerificationsCheck`;
+    const url= `https://api.tiniyo.com/v1/Account/${config.AuthID}/VerificationsCheck`;
     const options={
         method:"POST",
         headers:{
-            "Authorization": `Basic ${encodedAuth}`,
+            "Authorization": `Basic ${config.encodedAuth}`,
             "content-type": "application/json"
         },
         body:JSON.stringify({
@@ -84,6 +80,6 @@ app.get("/fail",(req,res)=>{
     res.sendFile(__dirname+"/public/fail.html");
 })
 
-app.listen("3001",()=>{
-    console.log("Server started on port 3000");
+app.listen(process.env.PORT || 3001,()=>{
+    console.log("Server started on port 3001");
 });
