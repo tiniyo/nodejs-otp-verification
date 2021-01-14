@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+# Nodejs-otp-verification
+This repository help to verify phone number using sms/call OTP with nodejs.
 
-You can use the [editor on GitHub](https://github.com/tiniyo/nodejs-otp-verification/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+![Project Image](/public/images/Inkedscreen-capture.gif)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+---
+# Requirements
 
-### Markdown
+- Node.js installed on the system.
+- Create a free account at Tiniyo. [https://tiniyo.com]
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+---
 
-```markdown
-Syntax highlighted code block
+## Setup
 
-# Header 1
-## Header 2
-### Header 3
+- Open terminal.
+- Clone the nodejs-otp-verification into your go path and change directory to cloned repository.
+```html
+    $ git clone "https://github.com/Akshat-vishwakarma/nodejs-otp-verification.git"
+    $ cd nodejs-otp-verification
+    $ npm install
+```
+- Create your Free TINIYO Account and grab your "API Key": https://www.tiniyo.com 
 
-- Bulleted
-- List
+![Project Image](/public/images/tiniyo.jpeg)
 
-1. Numbered
-2. List
+- Make a new file ".env" and write your TINIYO API Key and Secret Key as-
+```html
+AuthID=XXXXXXXXXXXXX
+AuthSecretID=XXXXXXXXXXXXXXXXXXXX
+```
+- Save the ".env" file.
+- Run the local node server in your console.
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```html
+    $ npm start
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+- Navigate to http://localhost:3001 to try it out!
+---
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tiniyo/nodejs-otp-verification/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
